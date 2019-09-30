@@ -6,6 +6,7 @@ import EmployeeList from './employee/EmployeeList'
 //only include these once they are built - previous practice exercise
 import LocationList from './location/LocationList'
 import OwnerList from './owner/OwnerList'
+import AnimalDetail from './animal/AnimalDetail'
 
 class ApplicationViews extends Component {
 
@@ -15,9 +16,14 @@ class ApplicationViews extends Component {
           <Route exact path="/" render={(props) => {
             return <Home />
           }} />
-          <Route path="/animals" render={(props) => {
+          {/* Make sure you add the `exact` attribute here */}
+          <Route exact path="/animals" render={(props) => {
             return <AnimalList />
-          }} />
+            }} />
+          <Route path="/animals/:animalId(\d+)" render={(props) => {
+            // Pass the animalId to the AnimalDetailComponent
+            return <AnimalDetail animalId={parseInt(props.match.params.animalId)}/>
+            }} />
           <Route path="/employee" render={(props) => {
             return <EmployeeList />
           }} />
