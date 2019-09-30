@@ -7,12 +7,6 @@
       "employeeId": 2
     },
     {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
-      "employeeId": 3
-    },
-    {
       "id": 4,
       "name": "Sadie",
       "breed": "Australian Sheperd",
@@ -23,12 +17,6 @@
       "name": "Chloe",
       "breed": "Cocker Spaniel",
       "employeeId": 2
-    },
-    {
-      "id": 6,
-      "name": "Biscuit",
-      "breed": "Pitbull",
-      "employeeId": 3
     }
   ],
   "employees": [
@@ -41,11 +29,6 @@
       "id": 2,
       "name": "Jessica Fletcher",
       "role": "Dog Walker & Feeder"
-    },
-    {
-      "id": 3,
-      "name": "John McSorley",
-      "role": "Poop Scooper"
     }
   ],
   "locations": [
@@ -53,11 +36,6 @@
       "id": 1,
       "name": "Nashville North",
       "address": "500 Puppy Way"
-    },
-    {
-      "id": 2,
-      "name": "Nashville South",
-      "address": "301 Plus Park Blvd"
     },
     {
       "id": 3,
@@ -73,13 +51,18 @@
   "owners": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle"
+      "name": "Miss Piggy",
+      "animalId": 2
     },
     {
       "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd"
+      "name": "Kermit the Frog",
+      "animalId": 4
+    },
+    {
+      "id": 4,
+      "name": "Bert and Ernie",
+      "animalId": 5
     }
   ]
 }
