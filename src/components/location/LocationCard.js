@@ -5,10 +5,8 @@ class LocationCard extends Component {
     return (
       <div className="card">
         <div className="card-content">
-        <address>
-            Visit Us at the Nashville North Location
-            <br />500 Puppy Way
-        </address>
+        <h3><span className="card-locationname">{this.props.location.name}</span></h3>
+          <p>Address: {this.props.location.address}</p>
         </div>
       </div>
     );

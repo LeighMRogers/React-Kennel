@@ -8,8 +8,8 @@ class EmployeeCard extends Component {
           {/* <picture>
             <img src={require('./dog.svg')} alt="My Dog" />
           </picture> */}
-          <h3>Employee of the Month: <span className="card-petname">Doodles</span></h3>
-          <p>Breed: Poodle</p>
+          <h3><span className="card-employeename">{this.props.employee.name}</span></h3>
+          <p>Role: {this.props.employee.role}</p>
         </div>
       </div>
     );

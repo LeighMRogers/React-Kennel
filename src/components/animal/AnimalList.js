@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-    //import the components we will need
-    import AnimalCard from './AnimalCard'
-    import AnimalManager from '../../modules/AnimalManager'
-    import './Animal.css';
+//import the components we will need
+import AnimalCard from './AnimalCard'
+import AnimalManager from '../../modules/AnimalManager'
+import './Animal.css';
 
-    class AnimalList extends Component {
-        //define what this component needs to render
-        state = {
-            animals: [],
-        }
+class AnimalList extends Component {
+    //define what this component needs to render
+    state = {
+        animals: [],
+    }
 
     componentDidMount(){
         console.log("ANIMAL LIST: ComponentDidMount");
