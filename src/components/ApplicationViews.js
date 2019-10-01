@@ -9,6 +9,7 @@ import OwnerList from './owner/OwnerList'
 import AnimalDetail from './animal/AnimalDetail'
 import LocationDetail from './location/LocationDetail'
 import EmployeeDetail from './employee/EmployeeDetail'
+import OwnerDetail from './owner/OwnerDetail'
 
 class ApplicationViews extends Component {
 
@@ -40,9 +41,13 @@ class ApplicationViews extends Component {
             // Pass the locationId to the LocationDetailComponent
             return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props}/>
             }} />
-          <Route path="/owner" render={(props) => {
+          <Route exact path="/owner" render={(props) => {
             return <OwnerList />
           }} />
+          <Route path="/owner/:ownerId(\d+)" render={(props) => {
+            // Pass the locationId to the LocationDetailComponent
+            return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)} {...props}/>
+            }} />
         </React.Fragment>
       )
     }
