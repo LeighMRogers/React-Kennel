@@ -17,6 +17,11 @@
       "name": "Chloe",
       "breed": "Cocker Spaniel",
       "employeeId": 2
+    },
+    {
+      "name": "Piggly Wiggly",
+      "breed": "Pug",
+      "id": 6
     }
   ],
   "employees": [
@@ -78,11 +83,6 @@
       "id": 4,
       "name": "Bert and Ernie",
       "animalId": 5
-    },
-    {
-      "id": 5,
-      "name": "Big Bird",
-      "animalId": 2
     },
     {
       "id": 6,
