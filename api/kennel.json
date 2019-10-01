@@ -28,7 +28,17 @@
     {
       "id": 2,
       "name": "Jessica Fletcher",
-      "role": "Dog Walker & Feeder"
+      "role": "Dog Walker"
+    },
+    {
+      "id": 3,
+      "name": "Hans Gruber",
+      "role": "Poop Scooper"
+    },
+    {
+      "id": 5,
+      "name": "Blanche Devereaux",
+      "role": "Receptionist"
     }
   ],
   "locations": [
@@ -36,6 +46,11 @@
       "id": 1,
       "name": "Nashville North",
       "address": "500 Puppy Way"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "301 Park Plus Blvd"
     },
     {
       "id": 3,
@@ -63,6 +78,16 @@
       "id": 4,
       "name": "Bert and Ernie",
       "animalId": 5
+    },
+    {
+      "id": 5,
+      "name": "Big Bird",
+      "animalId": 2
+    },
+    {
+      "id": 6,
+      "name": "Fozzy Bear",
+      "animalId": 4
     }
   ]
 }
