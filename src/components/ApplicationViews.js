@@ -10,6 +10,7 @@ import LocationDetail from './location/LocationDetail'
 import EmployeeDetail from './employee/EmployeeDetail'
 import OwnerDetail from './owner/OwnerDetail'
 import AnimalForm from './animal/AnimalForm'
+import EmployeeForm from './employee/EmployeeForm'
 
 class ApplicationViews extends Component {
 
@@ -32,10 +33,13 @@ class ApplicationViews extends Component {
 
           {/* routes for employees */}
           <Route exact path="/employee" render={(props) => {
-            return <EmployeeList />
+            return <EmployeeList {...props}/>
             }} />
           <Route path="/employee/:employeeId(\d+)" render={(props) => {
             return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} {...props} />
+            }} />
+          <Route path="/employee/new" render={(props) => {
+            return <EmployeeForm {...props} />
             }} />
 
           {/* routes for location */}
