@@ -29,7 +29,7 @@ class Login extends Component {
         })
     )
     /* pushes to selected page after login */
-    this.props.history.push("/animals");
+    this.props.history.push("/");
 
   }
 

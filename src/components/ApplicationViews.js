@@ -32,16 +32,20 @@ class ApplicationViews extends Component {
                 }
             }} />
           <Route path="/animals/:animalId(\d+)" render={(props) => {
-            return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props}/>
-            }} />
+            return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
+        }} />
           <Route path="/animals/new" render={(props) => {
             return <AnimalForm {...props} />
             }} />
 
           {/* routes for employees */}
           <Route exact path="/employee" render={(props) => {
-            return <EmployeeList {...props}/>
-            }} />
+              if (this.isAuthenticated()) {
+                  return <EmployeeList {...props} />
+              } else {
+                  return <Redirect to="/login" />
+              }
+          }} />
           <Route path="/employee/:employeeId(\d+)" render={(props) => {
             return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} {...props} />
             }} />
@@ -51,15 +55,23 @@ class ApplicationViews extends Component {
 
           {/* routes for location */}
           <Route exact path="/location" render={(props) => {
-            return <LocationList {...props}/>
-            }} />
+              if (this.isAuthenticated()) {
+                  return <LocationList {...props} />
+              } else {
+                  return <Redirect to="/login" />
+              }
+          }} />
           <Route path="/location/:locationId(\d+)" render={(props) => {
             return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props}/>
             }} />
 
           {/* owner routes */}
           <Route exact path="/owner" render={(props) => {
-            return <OwnerList {...props}/>
+              if (this.isAuthenticated()) {
+                  return <OwnerList {...props} />
+              } else {
+                  return <Redirect to="/login" />
+              }
           }} />
           <Route path="/owner/:ownerId(\d+)" render={(props) => {
             return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)} {...props}/>
