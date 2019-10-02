@@ -12,6 +12,8 @@ import OwnerDetail from './owner/OwnerDetail'
 import AnimalForm from './animal/AnimalForm'
 import EmployeeForm from './employee/EmployeeForm'
 import Login from './auth/Login'
+import AnimalEditForm from './animal/AnimalEditForm'
+import EmployeeEditForm from './employee/EmployeeEditForm'
 
 class ApplicationViews extends Component {
 
@@ -31,11 +33,14 @@ class ApplicationViews extends Component {
                     return <Redirect to="/login" />
                 }
             }} />
-          <Route path="/animals/:animalId(\d+)" render={(props) => {
+          <Route exact path="/animals/:animalId(\d+)" render={(props) => {
             return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
-        }} />
+            }} />
           <Route path="/animals/new" render={(props) => {
             return <AnimalForm {...props} />
+            }} />
+          <Route path="/animals/:animalId(\d+)/edit" render={props => {
+                return <AnimalEditForm {...props} />
             }} />
 
           {/* routes for employees */}
@@ -46,11 +51,14 @@ class ApplicationViews extends Component {
                   return <Redirect to="/login" />
               }
           }} />
-          <Route path="/employee/:employeeId(\d+)" render={(props) => {
+          <Route exact path="/employee/:employeeId(\d+)" render={(props) => {
             return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} {...props} />
             }} />
           <Route path="/employee/new" render={(props) => {
             return <EmployeeForm {...props} />
+            }} />
+          <Route path="/employee/:employeeId(\d+)/edit" render={props => {
+            return <EmployeeEditForm {...props} />
             }} />
 
           {/* routes for location */}

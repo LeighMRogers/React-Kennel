@@ -19,13 +19,13 @@ class EmployeeForm extends Component {
     */
     constructNewEmployee = evt => {
         evt.preventDefault();
-        if (this.state.employeeName === "" || this.state.role === "") {
+        if (this.state.employeeName === "" || this.state.employeeRole === "") {
             window.alert("Please input an employee name and role");
         } else {
             this.setState({ loadingStatus: true });
             const employee = {
                 name: this.state.employeeName,
-                role: this.state.role,
+                role: this.state.employeeRole,
             };
 
             // Create the employee and redirect user to employee list
