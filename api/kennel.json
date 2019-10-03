@@ -1,27 +1,16 @@
 {
   "animals": [
     {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd",
-      "employeeId": 2
-    },
-    {
       "id": 4,
       "name": "Sadie",
       "breed": "Australian Sheperd",
-      "employeeId": 1
-    },
-    {
-      "id": 5,
-      "name": "Chloe",
-      "breed": "Cocker Spaniel",
       "employeeId": 2
     },
     {
       "id": 6,
       "name": "Piggly Wiggly",
-      "breed": "Beagle"
+      "breed": "Beagle",
+      "employeeId": 3
     }
   ],
   "employees": [
@@ -81,13 +70,8 @@
     },
     {
       "id": 2,
-      "name": "Kermit the Frog",
+      "name": "Kermit the F",
       "animalId": 4
-    },
-    {
-      "id": 4,
-      "name": "Bert and Ernie",
-      "animalId": 5
     },
     {
       "id": 6,

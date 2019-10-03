@@ -8,16 +8,17 @@ class AnimalDetail extends Component {
     state = {
         name: "",
         breed: "",
+        employeeId: "",
         loadingStatus: true,
         isAnimalValid: false
     }
 
     handleDelete = () => {
-        //invoke the delete function in AnimalManger and re-direct to the animal list.
-        this.setState({loadingStatus: true})
-        AnimalManager.delete(this.props.animalId)
-        .then(() => this.props.history.push("/animals"))
-    }
+      //invoke the delete function in AnimalManger and re-direct to the animal list.
+      this.setState({loadingStatus: true})
+      AnimalManager.delete(this.props.animalId)
+      .then(() => this.props.history.push("/animals"))
+  }
 
     componentDidMount(){
         console.log("AnimalDetail: ComponentDidMount");
@@ -29,6 +30,7 @@ class AnimalDetail extends Component {
             this.setState({
                 name: animal.name,
                 breed: animal.breed,
+                employeeId: animal.employeeId,
                 loadingStatus: false,
                 isAnimalValid: isAnimalValid
             });

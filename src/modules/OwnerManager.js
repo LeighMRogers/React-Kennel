@@ -14,7 +14,7 @@ export default {
     .then(result => result.json())
   },
   update(editedOwner) {
-    return fetch(`${remoteURL}/owner/${editedOwner.id}`, {
+    return fetch(`${remoteURL}/owners/${editedOwner.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

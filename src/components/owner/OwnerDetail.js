@@ -4,6 +4,7 @@ import OwnerManager from '../../modules/OwnerManager';
 class OwnerDetail extends Component {
 
   state = {
+      ownerId: "",
       name: "",
       animalId: "",
       loadingStatus: true,
@@ -22,6 +23,7 @@ class OwnerDetail extends Component {
     OwnerManager.get(this.props.ownerId)
     .then((owner) => {
       this.setState({
+        ownerId: owner.id,
         name: owner.name,
         animalId: owner.animalId,
         loadingStatus: false
@@ -38,6 +40,7 @@ class OwnerDetail extends Component {
           </picture> */}
             <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Pet ID: {this.state.animalId}</p>
+            <button type="button" onClick={() => {this.props.history.push(`/owner/${this.state.ownerId}/edit`)}}>Edit</button>
             <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Remove</button>
         </div>
       </div>
