@@ -20,8 +20,6 @@ import EmployeeWithAnimals from './employee/EmployeeWithAnimals'
 
 class ApplicationViews extends Component {
 
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
-
     render() {
       return (
         <React.Fragment>
@@ -30,7 +28,7 @@ class ApplicationViews extends Component {
           }} />
           {/* Make sure you add the `exact` attribute here */}
           <Route exact path="/animals" render={props => {
-                if (this.isAuthenticated()) {
+                if (this.props.user) {
                     return <AnimalList {...props} />
                 } else {
                     return <Redirect to="/login" />
@@ -48,7 +46,7 @@ class ApplicationViews extends Component {
 
           {/* routes for employees */}
           <Route exact path="/employee" render={(props) => {
-              if (this.isAuthenticated()) {
+              if (this.props.user) {
                   return <EmployeeList {...props} />
               } else {
                   return <Redirect to="/login" />
@@ -69,7 +67,7 @@ class ApplicationViews extends Component {
 
           {/* routes for location */}
           <Route exact path="/location" render={(props) => {
-              if (this.isAuthenticated()) {
+              if (this.props.user) {
                   return <LocationList {...props} />
               } else {
                   return <Redirect to="/login" />
@@ -98,7 +96,9 @@ class ApplicationViews extends Component {
           }} />
 
             {/* login route */}
-          <Route path="/login" component={Login} />
+          <Route path="/login" render={props => {
+            return <Login setUser={this.props.setUser} {...props} />
+          }} />
 
         </React.Fragment>
       )

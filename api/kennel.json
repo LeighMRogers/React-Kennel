@@ -1,16 +1,25 @@
 {
   "animals": [
     {
-      "id": 4,
-      "name": "Sadie",
-      "breed": "Australian Sheperd",
-      "employeeId": 2
-    },
-    {
       "id": 6,
       "name": "Piggly Wiggly",
       "breed": "Beagle",
       "employeeId": 3
+    },
+    {
+      "name": "Sadie",
+      "breed": "Australian Sheperd",
+      "id": 7
+    },
+    {
+      "name": "Chloe",
+      "breed": "Cocker Spaniel",
+      "id": 8
+    },
+    {
+      "name": "Benji",
+      "breed": "Terrier",
+      "id": 9
     }
   ],
   "employees": [
@@ -62,21 +71,5 @@
       "address": "133 Jackson Street"
     }
   ],
-  "owners": [
-    {
-      "id": 1,
-      "name": "Miss Piggy",
-      "animalId": 2
-    },
-    {
-      "id": 2,
-      "name": "Kermit the F",
-      "animalId": 4
-    },
-    {
-      "id": 6,
-      "name": "Fozzy Bear",
-      "animalId": 4
-    }
-  ]
+  "owners": []
 }

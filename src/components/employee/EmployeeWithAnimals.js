@@ -9,22 +9,18 @@ class EmployeeWithAnimals extends Component {
       animals: []
     }
 
-    deleteAnimal = id => {
-        AnimalManager.delete(id)
-        .then(() => {
-            this.componentDidMount();
-        })
-    }
-
-    componentDidMount(){
-        //got here now make call to get employee with animal
+    getData = () => {
         EmployeeManager.getWithAnimals(this.props.match.params.employeeId)
-            .then((APIResult) => {
+        .then((APIResult) => {
             this.setState({
               employee: APIResult,
               animals: APIResult.animals,
             })
         })
+    }
+
+    componentDidMount() {
+        this.getData();
     }
 
     render(){
@@ -35,13 +31,14 @@ class EmployeeWithAnimals extends Component {
               <AnimalCard
                 key={animal.id}
                 animal={animal}
-                deleteAnimal={this.deleteAnimal}
+                getData={this.getData}
+                //getData={this.getData}
                 {...this.props}
               />
             )}
           </div>
         )
-      }
     }
+}
 
 export default EmployeeWithAnimals;

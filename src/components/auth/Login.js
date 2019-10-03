@@ -16,19 +16,13 @@ class Login extends Component {
   }
 
   handleLogin = (e) => {
-    e.preventDefault()
     /*
         For now, just store the email and password that
         the customer enters into local storage.
     */
-    localStorage.setItem(
-        "credentials",
-        JSON.stringify({
-            email: this.state.email,
-            password: this.state.password
-        })
-    )
-    /* pushes to selected page after login */
+    e.preventDefault()
+    let credentials = {email: this.state.email, password: this.state.password}
+    this.props.setUser(credentials);
     this.props.history.push("/");
 
   }
