@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import EmployeeManager from '../../modules/EmployeeManager'
 import AnimalCard from '../animal/AnimalCard'
-import AnimalManager from '../../modules/AnimalManager'
 
 class EmployeeWithAnimals extends Component {
     state = {

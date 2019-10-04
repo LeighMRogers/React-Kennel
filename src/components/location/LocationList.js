@@ -37,6 +37,14 @@ class LocationList extends Component {
         console.log("LOCATION LIST: Render");
 
         return(
+            <>
+            <section className="section-content">
+                <button type="button"
+                    className="btn"
+                    onClick={() => {this.props.history.push("/location/new")}}>
+                    Add Location
+                </button>
+            </section>
             <div className="container-cards">
                 {this.state.locations.map(location =>
                     <LocationCard key={location.id}
@@ -44,6 +52,7 @@ class LocationList extends Component {
                                 deleteLocation={this.deleteLocation}
                                 {...this.props} />)}
             </div>
+            </>
         )
     }
 }

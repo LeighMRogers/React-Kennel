@@ -20,6 +20,11 @@
       "name": "Benji",
       "breed": "Terrier",
       "id": 9
+    },
+    {
+      "name": "Oinky",
+      "breed": "Chihuahua",
+      "id": 10
     }
   ],
   "employees": [
@@ -58,7 +63,7 @@
     {
       "id": 2,
       "name": "Nashville South",
-      "role": ""
+      "address": ""
     },
     {
       "id": 3,
@@ -69,7 +74,58 @@
       "id": 4,
       "name": "Nashville East",
       "address": "133 Jackson Street"
+    },
+    {
+      "id": 5,
+      "name": "Brooklyn North",
+      "address": "133 Jackson Street"
+    },
+    {
+      "id": 6,
+      "name": "Brooklyn Central",
+      "address": "246 Vanderbilt Avenue"
+    },
+    {
+      "id": 7,
+      "name": "Brooklyn Super North",
+      "address": "149 Huron Street"
+    },
+    {
+      "name": "Brooklyn South",
+      "address": "Bensonhoist",
+      "id": 8
     }
   ],
-  "owners": []
+  "owners": [
+    {
+      "id": 1,
+      "name": "Miss Piggy",
+      "animalId": 2
+    },
+    {
+      "id": 2,
+      "name": "Kermit the Frog",
+      "animalId": 3
+    },
+    {
+      "id": 3,
+      "name": "Fozzy Bear",
+      "animalId": 4
+    },
+    {
+      "id": 4,
+      "name": "Sam the Eagle",
+      "animalId": 2
+    },
+    {
+      "id": 5,
+      "name": "Rolph",
+      "animalId": 2
+    },
+    {
+      "name": "Big Bird",
+      "animalId": "3",
+      "id": 6
+    }
+  ]
 }
